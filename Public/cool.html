@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/cool.css" rel="stylesheet">
+    <title>About</title>
+</head>
+
+            <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 粉色漸層背景 */
+            background: linear-gradient(135deg, #ffd6e8, #ffeaf3);
+            font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 60px;
+            border-radius: 32px;
+
+            /* 可愛粉色陰影 */
+            box-shadow:
+                0 20px 40px rgba(255, 105, 180, 0.25),
+                0 0 30px rgba(255, 182, 193, 0.4);
+
+            text-align: center;
+
+            /* 小小浮動感 */
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .card h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #ff6fae;
+            letter-spacing: 1px;
+        }
+
+        .card p {
+            margin-top: 12px;
+            font-size: 16px;
+            color: #888;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+         </style>
+<body>
+  <div class="card">
+        <h1>嘿嘿看到我了優 :D</h1>
+        <p>ヾ(●゜▽゜●)♡</p>
+    </div>
+</body>
+</html>

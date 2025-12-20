@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>About</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/MotionPathHelper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/MotionPathPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Theme CSS -->
+    <link href="css/about.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+</head>
+
+<body id="page-top" class="">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-custom bg-dark">
+        <div class="container">
+     
+
+            <nav class="float-end navbar-header">
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="ms-3" href="cool.html">你可以點點看我:D</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
+<!-- ===== Mountains Parallax Section ===== -->
+<header>
+        
+        <h2 id="title">ARTWORKS</h2>
+        <img id="heart02" src="img/0000.png" alt="" srcset="">
+        <img id="heart03" src="img/oooO.png" alt="" srcset="">
+        <img id="heart04" src="img/oooO.png" alt="" srcset="">
+        <img id="heart05" src="img/oooO.png" alt="" srcset="">
+        <img id="heart06" src="img/oooO.png" alt="" srcset="">
+        <img id="heart07" src="img/oooO.png" alt="" srcset="">
+    </header>
+  
+
+    <div id="map"></div>
+<script>
+
+
+    gsap.to("#heart02", { scrollTrigger: { scrub: 1 }, scale: 0.7, duration: 3, transformOrigin: "50% 100%" });
+    gsap.to("#heart03", { scrollTrigger: { scrub: 1 }, x: 250, duration: 3 });
+    gsap.to("#heart04", { scrollTrigger: { scrub: 1 }, x: 250, duration: 3 }); 
+    gsap.to("#heart05", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
+    gsap.to("#heart06", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
+    gsap.to("#heart07", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
+    gsap.to("#title", { scrollTrigger: { scrub: 1 }, scale: 0.5, duration: 4 });
+
+    //map
+    var map = L.map('map').setView([24.154513, 120.679897], 12);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker([24.154513, 120.679897]).addTo(map);
+</script>
+
+<body>
+  <li>
+           <a class="ms-3 nav-pink-btn" href="about.html">About</a>
+        </li>
+        <li>
+           <a class="ms-3 nav-pink-btn" href="index.html">Art Works</a>
+        </li>
+
+ <div class="TM">
+<img id="ME" src="img/about02/H.jpg" alt="" srcset="">
+<h1>許韡瀞</h1>
+<p>就只是一隻喜歡畫畫的大學生</p>
+<p>ヽ(́◕◞౪◟◕‵)ﾉ</p>
+<p>(((o(*ﾟ▽ﾟ*)o)))</p>
+<p>ヽ(́◕◞౪◟◕‵)ﾉ</p>
+
+</div>
+
+</body>
+
+</html>
