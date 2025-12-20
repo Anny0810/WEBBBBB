@@ -1,14 +1,14 @@
 {
-  "name": "web2025",
+  "name": "WEBBBBB",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/Anny0810/web2025#readme",
+  "homepage": "https://github.com/Anny0810/WEBBBBB#readme",
   "bugs": {
-    "url": "https://github.com/Anny0810/web2025/issues"
+    "url": "https://github.com/Anny0810/WEBBBBB/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Anny0810/web2025.git"
+    "url": "git+https://github.com/Anny0810/WEBBBBB.git"
   },
   "license": "ISC",
   "author": "",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
+    "express": "^5.2.1",
     "express-fileupload": "^1.5.2",
     "nedb-promises": "^6.2.3"
   }
