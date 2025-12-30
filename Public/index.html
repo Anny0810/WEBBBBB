@@ -162,18 +162,6 @@
 </div>
 
 
-            </div>
-            <div class="row text-center">
-                <div v-for="item in Services" class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-stack-1x fa-inverse" v-bind:class="item.icon"></i>
-                    </span>
-                    <h4 class="service-heading">{{item.title}}</h4>
-                    <p class="text-muted">{{item.text}}</p>
-                </div>
-            </div>
-        </div>
     </section>
 
  
@@ -260,70 +248,55 @@
                     <h2 class="section-heading">●遊戲(game)</h2>
                     <h3 class="section-subheading text-muted">具備基礎遊戲流程理解，能協助製作介面、角色動作或視覺素材。風格與表現方式可依專案需求調整，偏向實用與易讀性。<br>
                     Possesses a solid understanding of basic game workflows and can contribute to UI elements, character animation, or visual assets. Style is adaptable and focuses on clarity and usability for different project types..</h3>
-                           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                            <div id="carouselGameSlider" class="carousel slide" data-bs-ride="carousel">
-    <!-- 螢幕滑輪 -->
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <div class="carousel-wrapper">
+
+    <div id="carouselGameSlider" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- 指示器 -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselGameSlider" data-bs-slide-to="4"></button>
+        </div>
+
+        <!-- 輪播內容 -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/about/02-01.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="img/about/02-02.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="img/about/02-03.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="img/about/02-04.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="img/about/02-05.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+
+        <!-- 左右控制 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGameSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGameSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
     </div>
 
-    <!-- 輪播項目 -->
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="img/about/02-01.jpg" class="d-block w-100" alt="Image 1">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</h5>
-                <p>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/about/02-02.jpg" class="d-block w-100" alt="Image 2">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</h5>
-                <p>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="img/about/02-03.jpg" class="d-block w-100" alt="Image 3">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</h5>
-                <p>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</p>
-            </div>
-        </div>
-          <div class="carousel-item">
-            <img src="img/about/02-04.jpg" class="d-block w-100" alt="Image 4">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</h5>
-                <p>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</p>
-            </div>
-        </div>
-          <div class="carousel-item">
-            <img src="img/about/02-05.jpg" class="d-block w-100" alt="Image 5">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</h5>
-                <p>(꜆꜄꜆ ˙꒳˙)꜆꜄꜆ｵﾗｵﾗｵﾗｵﾗ</p>
-            </div>
-        </div>
+    <!-- carousel 外的內容 -->
+    <div class="game-link text-center mt-4">
+        <a href="https://enderheheanny.itch.io/stair" target="_blank">梯－遊戲載點</a>
     </div>
-    <a href="https://enderheheanny.itch.io/stair">梯-遊戲載點</a>
 
-    <!-- 控制按鈕 -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselGameSlider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselGameSlider" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-                </div>
-            </div>
-        </div>
+
     </section>
 
 
@@ -353,7 +326,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <form name="sentMessage" id="contactForm" action="/contact" method="POST" enctype="application/json">
+                <form name="sentMessage" id="contactForm" action="/contact" method="POST" enctype="multipart/form-data">
                     <div class="row">
 
                         <div class="col-md-6">
