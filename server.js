@@ -18,7 +18,7 @@ var DB=require("nedb-promises");
 var ServiceDB = DB.create(__dirname+"/Service.db");
 /*建立一個 NeDB 資料庫檔案叫 Porfolio.db用來存作品集資料*/
 var PorfolioDB = DB.create(__dirname+"/Porfolio.db");
-/*處理「聯絡表單資料」的資料庫*/
+/*YOOOO處理「聯絡表單資料」的資料庫*/
 var YOOOODB = DB.create(__dirname+"/YOOOO.db");
 
 
