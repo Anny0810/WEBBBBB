@@ -1,17 +1,17 @@
 var express = require("express");
 var server = express();
 var bodyParser = require("body-parser");
-
+var fileUpload = require("express-fileupload");
 
 server.set("view engine", 'ejs');
 server.set("views", __dirname+"/view")
 
-var fileUpload = require("express-fileupload");
+
 
 server.use(express.static(__dirname + "/Public"));
-server.use(bodyParser.urlencoded());
+server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
-server.use(fileUpload({limits:{fileSize:2*1024*1024}}))
+server.use(fileUpload({limits:{fileSize:210241024}}))
 
 var DB=require("nedb-promises");
 var ServiceDB = DB.create(__dirname+"/Service.db");
@@ -82,17 +82,23 @@ server.get("/about", (req, res) => {
 
 
 server.post("/contact", (req, res) =>{
-    ContactDB.insert(req.body);
-    //move to Public/upload
-    var upFile=req.files.myFile1;
-    upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
-        if(err==null){
-            res.render("msg",{message:"I got a file: "+upFile.name})
-        }else{
-            res.render("msg",{message:err});
-        }
-    })
-})
+    console.log("收到表單:", req.body);
+    ContactDB.insert(req.body).catch(err => console.log(err));
+
+    if(req.files && req.files.myFile1){
+        var upFile=req.files.myFile1;
+        upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
+            if(err){
+                res.render("msg",{message:"上傳檔案失敗NOOO: "+err});
+            }else{
+                res.render("msg",{message:"I got a file: "+upFile.name});
+            }
+        });
+    }else{
+        res.render("msg",{message:"沒有上傳檔案"});
+    }
+});
 
 
-server.listen(80)
+
+server.listen(8080)
