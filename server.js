@@ -14,9 +14,12 @@ server.use(bodyParser.json());
 server.use(fileUpload({limits:{fileSize:210241024}}))
 
 var DB=require("nedb-promises");
+/*用來存網站上的服務項目資料*/
 var ServiceDB = DB.create(__dirname+"/Service.db");
+/*建立一個 NeDB 資料庫檔案叫 Porfolio.db用來存作品集資料*/
 var PorfolioDB = DB.create(__dirname+"/Porfolio.db");
-var ContactDB = DB.create(__dirname+"/Contact.db");
+/*處理「聯絡表單資料」的資料庫*/
+var YOOOODB = DB.create(__dirname+"/YOOOO.db");
 
 
 server.get("/", (req, res) => {
@@ -49,9 +52,9 @@ server.get("/about", (req, res) => {
 })
 
 
-server.post("/contact", (req, res) =>{
+server.post("/YOOOO", (req, res) =>{
     console.log("收到表單:", req.body);
-    ContactDB.insert(req.body).catch(err => console.log(err));
+    YOOOODB.insert(req.body).catch(err => console.log(err));
 
     if(req.files && req.files.myFile1){
         var upFile=req.files.myFile1;

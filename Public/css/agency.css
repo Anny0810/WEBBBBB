@@ -769,60 +769,60 @@ aside.clients img {
 }
 
 /* 資料庫的底色 */
-section#contact {
+section#YOOOO {
   background-color: #000000;;
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
 }
-section#contact .section-heading {
+section#YOOOO .section-heading {
   color: white;
 }
 /*電話號碼欄位*/
-section#contact .form-group {
+section#YOOOO .form-group {
   margin-bottom: 25px;
 }
-section#contact .form-group input,
-section#contact .form-group textarea {
+section#YOOOO .form-group input,
+section#YOOOO .form-group textarea {
   padding: 20px;
 }
-section#contact .form-group input.form-control {
+section#YOOOO .form-group input.form-control {
   height: auto;
 }
-section#contact .form-group textarea.form-control {
+section#YOOOO .form-group textarea.form-control {
   height: 236px;
 }
-section#contact .form-control:focus {
+section#YOOOO .form-control:focus {
   border-color: #ff9587;
   box-shadow: none;
 }
-section#contact ::-webkit-input-placeholder {
+section#YOOOO ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#contact :-moz-placeholder {
+section#YOOOO :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#contact ::-moz-placeholder {
+section#YOOOO ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#contact :-ms-input-placeholder {
+section#YOOOO :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
   color: #eeeeee;
 }
-section#contact .text-danger {
+section#YOOOO .text-danger {
   color: #e74c3c;
 }
 footer {
@@ -971,5 +971,5 @@ body {
     animation: spin 1s linear infinite;
     /* 設定旋轉的中心點 (可選) */
     transform-origin: center;
-    display: inline-block; /* 讓 transform 屬性生效 */
+    display: inline-block; /* 讓 transform 屬性生效 *//*讓呈現位置介於兩者之間*/
   }
