@@ -83,9 +83,9 @@ server.get("/about", (req, res) => {
 
 server.post("/contact", (req, res) =>{
     ContactDB.insert(req.body);
-    //move to public/upload
+    //move to Public/upload
     var upFile=req.files.myFile1;
-    upFile.mv(__dirname+"/public/upload/"+upFile.name, function(err){
+    upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
         if(err==null){
             res.render("msg",{message:"I got a file: "+upFile.name})
         }else{
