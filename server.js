@@ -101,4 +101,4 @@ server.post("/contact", (req, res) =>{
 
 
 
-server.listen(8080)
+server.listen(80)
