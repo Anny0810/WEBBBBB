@@ -84,8 +84,11 @@
     gsap.to("#heart05", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
     gsap.to("#heart06", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
     gsap.to("#heart07", { scrollTrigger: { scrub: 1 }, x: 100, duration: 3 });
-    gsap.to("#title", { scrollTrigger: { scrub: 1 }, scale: 0.5, duration: 4 });
-
+    gsap.to("#title", { scrollTrigger: { scrub: 1 }, scale: 0.5, duration: 4 }); 
+    // 啟用 ScrollTrigger 插件，讓動畫跟捲動同步
+    // 讓動畫隨著滾動進度平滑播放，值越大越慢（1 秒延遲平滑）
+    // 將元素縮小到原本的 50%
+    // 動畫持續 4 秒（對 scrollTrigger 而言，duration 主要影響滾動速度換算）
     //map
     var map = L.map('map').setView([24.154513, 120.679897], 12);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

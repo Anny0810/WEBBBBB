@@ -512,17 +512,21 @@ section h3.section-subheading {
     padding: 150px 0;
   }
 }
+/* 作品集區域的標題 */
 .service-heading {
   margin: 15px 0;
-  text-transform: none;
+  text-transform: none;/* 不改變文字大小寫，保留原始輸入 */
 }
+
+/* 作品集的每個作品項目 */
 #portfolio .portfolio-item {
   margin: 0 0 15px;
-  right: 0;
+  right: 0;/* 相對定位右側位置為 0（通常配合 position 使用） */
 }
+/* 作品項目的連結區塊 */
 #portfolio .portfolio-item .portfolio-link {
-  display: block;
-  position: relative;
+  display: block;/* 區塊元素，可設定寬高 */
+  position: relative;/* 相對定位，內層絕對定位 */
   max-width: 400px;
   margin: 0 auto;
 }
@@ -560,7 +564,7 @@ section h3.section-subheading {
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
-  text-align: center;
+  text-align: center;/*對齊方式*/
   padding: 25px;
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
@@ -601,10 +605,11 @@ section h3.section-subheading {
   position: relative;
   min-height: 50px;
 }
+/* 選擇 .timeline 下的每個 li 的 :before 與 :after 偽元素 */
 .timeline > li:before,
 .timeline > li:after {
-  content: " ";
-  display: table;
+  content: " ";/* 設定偽元素內容為空格，必須有 content 才能顯示偽元素 */
+  display: table;/* 讓偽元素像表格一樣生成區塊，方便清除浮動或排版 */
 }
 .timeline > li:after {
   clear: both;
@@ -940,9 +945,10 @@ ul.social-buttons li a:active {
   /* Safari and Chrome */
   z-index: 1052;
 }
+/* 隱藏作品集模態框的背景遮罩 */
 .portfolio-modal .modal-backdrop {
-  opacity: 0;
-  display: none;
+  opacity: 0;/* 透明度 0，看不到 */
+  display: none;/* 不占空間，不顯示 */
 }
 ::-moz-selection {
   text-shadow: none;
