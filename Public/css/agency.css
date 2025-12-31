@@ -530,8 +530,9 @@ section h3.section-subheading {
   max-width: 400px;
   margin: 0 auto;
 }
+/* 作品項目滑鼠懸停效果的遮罩層 */
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  background: #ff9587;
+  background: #ff9587;/* 半透明粉紅色背景 */
   position: absolute;
   width: 100%;
   height: 100%;
