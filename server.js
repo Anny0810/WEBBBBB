@@ -54,21 +54,32 @@ server.get("/about", (req, res) => {
 
 server.post("/YOOOO", (req, res) =>{
     console.log("收到表單:", req.body);
-    YOOOODB.insert(req.body).catch(err => console.log(err));
+  
 
     if(req.files && req.files.myFile1){
         var upFile=req.files.myFile1;
+        var savePath = "/upload/"+upFile.name;//儲存檔案路徑
+        req.body.myFile1 = savePath;
         upFile.mv(__dirname+"/Public/upload/"+upFile.name, function(err){
             if(err){
                 res.render("msg",{message:"上傳檔案失敗NOOO: "+err});
             }else{
-                res.render("msg",{message:"I got a file: "+upFile.name});
+                res.render("msg",{message:"我得到>:O: "+upFile.name});
+ YOOOODB.insert(req.body).catch(err => console.log(err));//加入資料庫
             }
         });
+   
+
     }else{
         res.render("msg",{message:"沒有上傳檔案耶你>:("});
     }
 });
+
+server.get("/YOOOO", (req, res) => {
+  YOOOODB.find({}).then(results=>{
+        res.send(results);
+    })
+})
 
 
 
