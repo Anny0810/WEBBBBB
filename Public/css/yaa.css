@@ -20,34 +20,48 @@
 
 /*整體網站之背景顏色*/
 body {
-  overflow-x: hidden;
+  overflow-x: hidden;/*圖片、文字...超出去:就藏起來*/
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
     #ffe6ef 50%,
     #ffffff 100%
-  );
-  position: relative;
-  z-index: 0; /* 確保 body 是 z-index 參考 */
+  );/*線性漸層*/
+  position: relative;/*相對定位-定位了就可以調整上下左右*/
 }
 
 /* 粒子層 */
 body::before {
   content: "";
+  /*在 body 裡面，先插入一個看不見內容的元素，只要存在不要顯示文字，假如說希望文字前面U符號或引號參考來源:https://steam.oxxostudio.tw/category/css/content/content-quotes.html*/
   position: fixed;
+   /* fixed：粒子會固定在視窗上，不會隨頁面捲ㄉㄨㄥˋ  */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
+  /* 讓滑鼠事件可ˇ以穿透粒子層，避免影響點擊按鈕或連節 */
   background:
     radial-gradient(circle, rgba(0, 0, 0, 0.8) 2px, transparent 2px),
     radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 2px),
     radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+    /*radial-gradient從中心向外擴散的漸層 前面的radial可以改成其他樣式*/
+    /*2px 以外立刻變成完全透明  transparent 功能是讓背景顏色露出來*/
   background-size: 50px 50px, 80px 80px, 120px 120px;
+    /* 50px 50px第一層粒子間距
+       數字越小:粒子越密
+       數字越大:粒子越稀疏 */
+    /* 80px 80px第二層粒子間距 */
+    /* 120px 120px第三層粒子間距（通常會設置成最大，製造景深感OWO）*/
+
   animation: particlesMove 20s linear infinite;
-  z-index: -1; /* 放到 body 背景下方 */
+    /* particlesMove是對應的 @keyframes 名稱
+     20s:粒子移動速度（越小越快）
+     linear:等速移動
+     infinite:無限循環 */
+  z-index: -1; 
 }
 
 @keyframes particlesMove {
@@ -58,12 +72,14 @@ body::before {
     background-position: 200px 400px, 100px 200px, 300px 100px;
   }
 }
-
+/*0%:動畫開始
+100%:動畫結束*/
+/*向右移動  向下移動 *//* 第一層、第二層、第三層 */
 
 
 .text-muted {
   color: #777777;
-}
+}/*灰色的字*/
 
 p {
   font-size: 14px;
@@ -430,9 +446,9 @@ section.asdfghjk :-moz-placeholder {
   color: #eeeeee;
 }
 section.asdfghjk ::-moz-placeholder {
-  /* Firefox 19+ */
+
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
+  text-transform: uppercase;  /* 大小寫:全大寫 */
   font-weight: 700;
   color: #eeeeee;
 }

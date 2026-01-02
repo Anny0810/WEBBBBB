@@ -290,6 +290,11 @@ li {
         0 18px 40px rgba(255, 105, 180, 0.55),
         0 0 40px rgba(255, 182, 193, 0.65);
 }
+/*第一ㄍ影子:往下投影，讓元素有漂浮感
+
+第二ㄍ影子:全圓模糊光暈，讓元素更夢幻、發光
+水平 垂直 模糊距離:40px
+(左右移動 上下移動 模糊大小 顏色（半透明）*/
 
 .TM h1 {
     font-size: 40px;
@@ -304,8 +309,8 @@ li {
 
 .nav-pink-btn {
   
-    display: inline-block;
-    margin:  50px auto 0 auto;
+    display: inline-block;/* inline-block，像文字一樣可以水平排列，能設定寬高 */
+    margin:  50px auto 0 auto;/* 上 50px，左右自動置中，下 0px */
     left: 1000%;
     padding: 20px 80px;
     font-size: 15px;
@@ -319,15 +324,19 @@ li {
     text-decoration: none;
 
     box-shadow: 0 4px 10px rgba(255, 111, 174, 0.35);
+    
+    
+    /*水平 垂直 模糊距離10px (左右移動 上下移動 模糊大小 顏色（半透明）)*/
 
     transition: all 0.25s ease;
 }
 
 /* 滑鼠移上去 */
 .nav-pink-btn:hover {
-    background: linear-gradient(135deg, #ec5aa3, #ff85bc);
+    background: linear-gradient(135deg, #ec5aa3, #ff85bc);/*漸層的方向，從左上到右下偏斜 135 度。*/
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 6px 16px rgba(255, 111, 174, 0.45);
+      /*(左右移動 上下移動 模糊大小 顏色（半透明）*/
 }
 
 /* 點擊瞬間 */

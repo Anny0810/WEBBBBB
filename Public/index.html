@@ -33,7 +33,7 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <!-- Theme CSS -->
+    <!-- CSS -->
     <link href="css/yaa.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -43,7 +43,7 @@
 
 <body id="page-top" class="">
 
-    <!-- Navigation -->
+
     <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-custom ">
         <div class="container">
      
@@ -77,7 +77,7 @@
     <div id="map"></div>
 <script>
 
-
+      //transformOrigin:原點，transform-origin: 50% 50%(正中央)類斯AE的毛點
     gsap.to("#heart02", { scrollTrigger: { scrub: 1 }, scale: 0.7, duration: 3, transformOrigin: "50% 100%" });
     gsap.to("#heart03", { scrollTrigger: { scrub: 1 }, x: 250, duration: 3 });
     gsap.to("#heart04", { scrollTrigger: { scrub: 1 }, x: 250, duration: 3 }); 
@@ -102,7 +102,7 @@
            <a class="ms-3 nav-pink-btn" href="index.html">Art Works</a>
         </li>
 
-    <!-- Services Section -->
+    <!-- 是我的絲賴der -->
     <section id="services">
         <div class="container">
             <div class="row">
@@ -222,15 +222,15 @@
 
                             <!-- 控制按鈕 -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span><!-- ata-bs-slide="prev"指示 Bootstrap點擊後輪播切換到上一張 -->
                                 <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span><!-- ata-bs-slide="next"指示 Bootstrap點擊後輪播切換到下一張 -->
                                 <span class="visually-hidden">Next</span>
                             </button>
                             </div>
-                </div>
+                </div> 
             </div>
         </div>
     </section>
@@ -313,7 +313,7 @@
           data-bs-ride="carousel"
           v-if="YOOOO.length"
         >
-          <!-- indicators -->
+          <!-- 底下四條線按鈕連接資料庫 -->
           <div class="carousel-indicators">
             <button
               v-for="(item, index) in YOOOO"
@@ -325,7 +325,7 @@
             ></button>
           </div>
 
-       
+        <!-- 按鈕連接資料庫 -->
           <div class="carousel-inner">
             <div
               class="carousel-item "
@@ -340,7 +340,7 @@
               >
             </div>
           </div>
-
+            <!-- 左右方向按鈕 -->
           <button class="carousel-control-prev" type="button"
                   data-bs-target="#fanSlider" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
@@ -351,7 +351,7 @@
           </button>
         </div>
 
-        <p v-else class="text-muted">尚無作品</p>
+        <p v-else class="text-muted">尚無作品>:O</p>
       </div>
     </div>
   </div>
